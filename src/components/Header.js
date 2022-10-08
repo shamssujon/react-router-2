@@ -8,7 +8,8 @@ const Header = () => {
         { id: 2, name: "Products", path: "/products" },
         { id: 3, name: "About", path: "/about" },
         { id: 4, name: "Contact", path: "/contact" },
-        { id: 5, name: "404", path: "/404" },
+        { id: 5, name: "Users", path: "/users" },
+        { id: 6, name: "404", path: "/404" },
     ];
     return (
         <header className="bg-slate-100 py-4">

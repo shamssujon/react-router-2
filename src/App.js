@@ -5,6 +5,8 @@ import ProductsPage from "./pages/ProductsPage";
 import ContactPage from "./pages/ContactPage";
 import Layout from "./layout/Layout";
 import ErrorPage from "./pages/ErrorPage";
+import UsersPage from "./pages/UsersPage";
+import UserDetails from "./components/UserDetails";
 
 function App() {
     const router = createBrowserRouter([
@@ -15,6 +17,21 @@ function App() {
                 { path: "/", element: <HomePage></HomePage> },
                 { path: "/home", element: <HomePage></HomePage> },
                 { path: "/products", element: <ProductsPage></ProductsPage> },
+                {
+                    path: "/users",
+                    element: <UsersPage></UsersPage>,
+                    loader: async () => {
+                        return fetch("https://jsonplaceholder.typicode.com/users");
+                    },
+                },
+                {
+                    path: "/user/:userId",
+                    loader: async ({ params }) => {
+                        console.log(params.userId);
+                        return fetch(`https://jsonplaceholder.typicode.com/users/${params.userId}`);
+                    },
+                    element: <UserDetails></UserDetails>,
+                },
                 { path: "/about", element: <AboutPage></AboutPage> },
             ],
         },
