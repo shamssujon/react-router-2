@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import NavLink from "./NavLink";
 
 const Header = () => {
@@ -7,12 +8,13 @@ const Header = () => {
         { id: 2, name: "Products", path: "/products" },
         { id: 3, name: "About", path: "/about" },
         { id: 4, name: "Contact", path: "/contact" },
+        { id: 5, name: "404", path: "/404" },
     ];
     return (
         <header className="bg-slate-100 py-4">
             <div className="container flex items-center justify-between">
                 <h4 className="text-2xl font-bold ">
-                    <a href="/">React router 2</a>
+                    <Link to="/">React router 2</Link>
                 </h4>
                 <nav className="flex items-center gap-4">
                     {routes.map((route) => (

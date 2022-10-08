@@ -4,7 +4,7 @@ import Header from "../components/Header";
 
 const ContactPage = () => {
     return (
-        <div>
+        <>
             <Header></Header>
             <section className="py-12">
                 <div className="container text-center">
@@ -12,7 +12,7 @@ const ContactPage = () => {
                 </div>
             </section>
             <Footer></Footer>
-        </div>
+        </>
     );
 };
 
