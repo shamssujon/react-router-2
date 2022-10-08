@@ -14,7 +14,7 @@ const User = ({ user }) => {
             </p>
             <Link
                 className="mt-4 block rounded bg-slate-700 py-2 px-4 text-center text-white transition hover:bg-slate-800"
-                to={`/user/${id}`}>
+                to={`/users/user/${id}`}>
                 Details
             </Link>
         </div>

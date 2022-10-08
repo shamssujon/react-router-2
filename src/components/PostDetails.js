@@ -14,7 +14,7 @@ const PostDetails = () => {
                 <div className="block">
                     <Link
                         className="mt-4 inline-block rounded bg-slate-700 py-2 px-4 text-center text-white transition hover:bg-slate-800"
-                        to={`/user/${userId}`}>
+                        to={`/users/user/${userId}`}>
                         Get the author
                     </Link>
                 </div>

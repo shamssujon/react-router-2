@@ -1,10 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import NavLink from "./NavLink";
+import MenuItem from "./MenuItem";
 
 const Header = () => {
     const routes = [
-        { id: 1, name: "Home", path: "/" },
+        { id: 1, name: "Home", path: "/home" },
         { id: 2, name: "Products", path: "/products" },
         { id: 3, name: "Blog", path: "/blog" },
         { id: 4, name: "Users", path: "/users" },
@@ -20,7 +20,7 @@ const Header = () => {
                 </h4>
                 <nav className="flex items-center gap-4">
                     {routes.map((route) => (
-                        <NavLink key={route.id} route={route}></NavLink>
+                        <MenuItem key={route.id} route={route}></MenuItem>
                     ))}
                 </nav>
             </div>

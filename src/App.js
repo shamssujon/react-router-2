@@ -28,7 +28,7 @@ function App() {
                     },
                 },
                 {
-                    path: "/user/:userId",
+                    path: "/users/user/:userId",
                     loader: async ({ params }) => {
                         return fetch(`https://jsonplaceholder.typicode.com/users/${params.userId}`);
                     },
